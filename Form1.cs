@@ -48,7 +48,7 @@ namespace Esercizio_AS2324._3G.SpadiniLorenzo.PSDBPCTO
             SQLiteDataAdapter da = new SQLiteDataAdapter(query, strConnessione);
 
             try
-            { 
+            {
                 da.Fill(dtDati);
                 dgvDati.DataSource = dtDati;
             }
@@ -57,5 +57,40 @@ namespace Esercizio_AS2324._3G.SpadiniLorenzo.PSDBPCTO
                 MessageBox.Show(exe.Message);
             }
         }
+
+        private void cmbScelta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedOption = cmbScelta.ToString();
+            string query = "";
+            string strConnessione = "Data Source=" + @"C:\Users\lorenzo\Desktop\Esercizio AS2324.3G.SpadiniLorenzo.PSDBPCTO" + ";Version=3;";
+
+            DataTable dtDati = new DataTable();
+
+            switch (selectedOption)
+            {
+                case "Elenco squadre non italiane ordinate per nome":
+                    query = "SELECT * FROM Squadre WHERE Nazionalità != 'Italia' ORDER BY Nome";
+                    break;
+                case "Elenco piloti Ducati ordinati per cognome e nome":
+                    query = "SELECT * FROM Piloti WHERE Squadra = 'Ducati' ORDER BY Cognome, Nome";
+                    break;
+                case "Elenco circuiti ordinati per nome":
+                    query = "SELECT * FROM Circuiti ORDER BY Nome";
+                    break;
+                default:
+                    MessageBox.Show("Opzione non valida");
+                    break;
+            }
+
+            try
+            {
+                
+            }
+            catch (Exception exe)
+            {
+                MessageBox.Show(exe.Message);
+            }
+        }
+        }
     }
-}
+

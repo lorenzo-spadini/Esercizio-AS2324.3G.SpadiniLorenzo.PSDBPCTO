@@ -32,7 +32,6 @@
             btnElencoGare = new Button();
             dgvDati = new DataGridView();
             cmbScelta = new ComboBox();
-            btnEstrai = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvDati).BeginInit();
             SuspendLayout();
             // 
@@ -73,22 +72,13 @@
             cmbScelta.Name = "cmbScelta";
             cmbScelta.Size = new Size(284, 28);
             cmbScelta.TabIndex = 4;
-            // 
-            // btnEstrai
-            // 
-            btnEstrai.Location = new Point(603, 32);
-            btnEstrai.Name = "btnEstrai";
-            btnEstrai.Size = new Size(94, 29);
-            btnEstrai.TabIndex = 5;
-            btnEstrai.Text = "estrai";
-            btnEstrai.UseVisualStyleBackColor = true;
+            cmbScelta.SelectedIndexChanged += cmbScelta_SelectedIndexChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnEstrai);
             Controls.Add(cmbScelta);
             Controls.Add(dgvDati);
             Controls.Add(btnElencoGare);
@@ -105,6 +95,5 @@
         private Button btnElencoGare;
         private DataGridView dgvDati;
         private ComboBox cmbScelta;
-        private Button btnEstrai;
     }
 }
