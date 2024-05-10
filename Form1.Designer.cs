@@ -30,10 +30,8 @@
         {
             btnElencoPiloti = new Button();
             btnElencoGare = new Button();
-            cmbScelta = new ComboBox();
-            dgwRIsultati = new DataGridView();
-            btnEstrai = new Button();
-            ((System.ComponentModel.ISupportInitialize)dgwRIsultati).BeginInit();
+            dgvDati = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvDati).BeginInit();
             SuspendLayout();
             // 
             // btnElencoPiloti
@@ -44,6 +42,7 @@
             btnElencoPiloti.TabIndex = 0;
             btnElencoPiloti.Text = "elenco piloti";
             btnElencoPiloti.UseVisualStyleBackColor = true;
+            btnElencoPiloti.Click += btnElencoPiloti_Click;
             // 
             // btnElencoGare
             // 
@@ -54,46 +53,26 @@
             btnElencoGare.Text = "elenco gare";
             btnElencoGare.UseVisualStyleBackColor = true;
             // 
-            // cmbScelta
+            // dgvDati
             // 
-            cmbScelta.FormattingEnabled = true;
-            cmbScelta.Items.AddRange(new object[] { " Elenco squadre non italiane ordinate per nome", " Elenco piloti Ducati ordinati per cognome e nome", " Elenco circuiti ordinati per nome" });
-            cmbScelta.Location = new Point(315, 34);
-            cmbScelta.Name = "cmbScelta";
-            cmbScelta.Size = new Size(282, 28);
-            cmbScelta.TabIndex = 2;
-            // 
-            // dgwRIsultati
-            // 
-            dgwRIsultati.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgwRIsultati.Location = new Point(47, 140);
-            dgwRIsultati.Name = "dgwRIsultati";
-            dgwRIsultati.RowHeadersWidth = 51;
-            dgwRIsultati.Size = new Size(741, 298);
-            dgwRIsultati.TabIndex = 3;
-            // 
-            // btnEstrai
-            // 
-            btnEstrai.Location = new Point(641, 33);
-            btnEstrai.Name = "btnEstrai";
-            btnEstrai.Size = new Size(94, 29);
-            btnEstrai.TabIndex = 4;
-            btnEstrai.Text = "estrai";
-            btnEstrai.UseVisualStyleBackColor = true;
+            dgvDati.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDati.Location = new Point(47, 140);
+            dgvDati.Name = "dgvDati";
+            dgvDati.RowHeadersWidth = 51;
+            dgvDati.Size = new Size(741, 298);
+            dgvDati.TabIndex = 3;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnEstrai);
-            Controls.Add(dgwRIsultati);
-            Controls.Add(cmbScelta);
+            Controls.Add(dgvDati);
             Controls.Add(btnElencoGare);
             Controls.Add(btnElencoPiloti);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dgwRIsultati).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDati).EndInit();
             ResumeLayout(false);
         }
 
@@ -101,8 +80,6 @@
 
         private Button btnElencoPiloti;
         private Button btnElencoGare;
-        private ComboBox cmbScelta;
-        private DataGridView dgwRIsultati;
-        private Button btnEstrai;
+        private DataGridView dgvDati;
     }
 }
