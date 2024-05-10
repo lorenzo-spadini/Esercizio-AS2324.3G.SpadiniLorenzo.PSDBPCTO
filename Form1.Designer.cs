@@ -31,6 +31,8 @@
             btnElencoPiloti = new Button();
             btnElencoGare = new Button();
             dgvDati = new DataGridView();
+            cmbScelta = new ComboBox();
+            btnEstrai = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvDati).BeginInit();
             SuspendLayout();
             // 
@@ -63,11 +65,31 @@
             dgvDati.Size = new Size(741, 298);
             dgvDati.TabIndex = 3;
             // 
+            // cmbScelta
+            // 
+            cmbScelta.FormattingEnabled = true;
+            cmbScelta.Items.AddRange(new object[] { "Elenco squadre non italiane ordinate per nome", "Elenco piloti Ducati ordinati per cognome e nome", "Elenco circuiti ordinati per nome" });
+            cmbScelta.Location = new Point(282, 33);
+            cmbScelta.Name = "cmbScelta";
+            cmbScelta.Size = new Size(284, 28);
+            cmbScelta.TabIndex = 4;
+            // 
+            // btnEstrai
+            // 
+            btnEstrai.Location = new Point(603, 32);
+            btnEstrai.Name = "btnEstrai";
+            btnEstrai.Size = new Size(94, 29);
+            btnEstrai.TabIndex = 5;
+            btnEstrai.Text = "estrai";
+            btnEstrai.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnEstrai);
+            Controls.Add(cmbScelta);
             Controls.Add(dgvDati);
             Controls.Add(btnElencoGare);
             Controls.Add(btnElencoPiloti);
@@ -82,5 +104,7 @@
         private Button btnElencoPiloti;
         private Button btnElencoGare;
         private DataGridView dgvDati;
+        private ComboBox cmbScelta;
+        private Button btnEstrai;
     }
 }
