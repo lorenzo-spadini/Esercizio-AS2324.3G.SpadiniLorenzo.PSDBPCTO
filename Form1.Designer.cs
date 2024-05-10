@@ -52,6 +52,7 @@
             btnElencoGare.TabIndex = 1;
             btnElencoGare.Text = "elenco gare";
             btnElencoGare.UseVisualStyleBackColor = true;
+            btnElencoGare.Click += btnElencoGare_Click;
             // 
             // dgvDati
             // 
